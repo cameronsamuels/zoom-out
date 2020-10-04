@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  
+  "version": "1.0",
+  "name": "Zoom Out",
+  "description": "Focus on your meeting and let this extension close the post-attendee tab",
+
+  "content_scripts": [{
+    "matches": [
+      "https://zoom.us/postattendee*",
+      "https://*.zoom.us/j/*",
+      "https://*.zoom.us/s/*"
+      ],
+    "js": ["content.js"]
+  }],
+  
+  "background": {
+    "scripts": ["background.js"]
+  }
+  
+}
